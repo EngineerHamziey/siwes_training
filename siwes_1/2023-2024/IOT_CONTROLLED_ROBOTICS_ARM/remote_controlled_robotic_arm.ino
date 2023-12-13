@@ -1,26 +1,99 @@
 #if 1
+/* Include the HCPCA9685 library */
+#include "HCPCA9685.h"
+
+// #define minPosition 10
+#define minConvertedPosition 10
+#define maxConvetedPosition 460
+// #define maxPosition 500
+
+#define I2CAdd 0x40
+
+//defining the servo pins
+#define baseServo 3
+#define clampServo 7
+#define leftServo 11
+#define rightServo 15
+
+
+//min and mx positon for each servos =======================================================
+// baseServo  postion
+#define baseServoMin 0
+#define baseServoMax 180
+
+int
+  baseServoHome = 90,
+  currentBaseServoPosition = baseServoHome;
+
+
+// clampServo postion
+#define clampServoMin 0   //opened  in degrees
+#define clampServoMax 11  //closed  in degrees
+// #define clampServoMax 11 //closed  in degrees
+
+int
+  clampServoHome = clampServoMax,
+  currentClampServoPosition = clampServoHome;
+
+
+// leftServo postion
+#define leftServoMin 0   // in degrees
+#define leftServoMax 85  // extend forward
+
+int
+  leftServoHome = leftServoMin,
+  currentLeftServoPosition = leftServoHome;
+
+
+// rightServo postion
+#define rightServoMin 110  //
+#define rightServoMax 180  //
+
+int
+  rightServoHome = rightServoMin,
+  currentRightServoPosition = rightServoHome;
+
+// ==============================================================
+
+
+
+
+/* Create an instance of the library */
+HCPCA9685 HCPCA9685(I2CAdd);
+
 
 
 void setup() {
   /* Initialise the library and set it to 'servo mode' */
+  beginTheSerialMonitor();
   HCPCA9685.Init(SERVO_MODE);
   setBTBaudRate();
   /* Wake the device up */
   HCPCA9685.Sleep(false);
 
   moveServoToHomePosition();
-  beginTheSerialMonitor();
 }
 
 
 void loop() {
+  // testClampServo();
+  // decrementBaseServo();
+  // incrementBaseServo();
+  // decrementRightServo();
+  // while (currentRightServoPosition ) {
+  // statements
+  // }
+  decrementRightServo();
+  // incrementRightServo();
+
+
   delay(50);
 }
 
 
 void decrementRightServo() {
   Serial.println("\ncurrent pos: " + String(currentRightServoPosition));
-  if (currentRightServoPosition != 0) {
+  if (currentRightServoPosition != rightServoMin) {
     currentRightServoPosition--;
   }
   Serial.println("pos after Validation: " + String(currentRightServoPosition));
@@ -31,7 +104,7 @@ void decrementRightServo() {
 
 void incrementRightServo() {
   currentRightServoPosition++;
-  currentRightServoPosition = (currentRightServoPosition >= RightServoMax) ? rightServoMax : currentRightServoPosition;
+  currentRightServoPosition = (currentRightServoPosition >= rightServoMax) ? rightServoMax : currentRightServoPosition;
 
   moveServo(rightServo, currentRightServoPosition);
   delay(servoDelay);
@@ -58,8 +131,14 @@ left servo:
 */
 
 void moveServo(int whichServo, int servoAngle) {
-  servoAngle = map(servoAngle, 0, 180, 10, 460);
-  HCPCA9685.Servo(whichServo, servoAngle);
+  int convertedServoAngle = map(servoAngle, 0, 180, 10, 460);
+  if (servoAngle == 0) {
+    convertedServoAngle = 10;
+  } else if(servoAngle == 180) {
+    convertedServoAngle = 460;
+  }
+
+  HCPCA9685.Servo(whichServo, convertedServoAngle);
 }
 
 void moveServoToHomePosition() {
@@ -72,7 +151,7 @@ void moveServoToHomePosition() {
 void decrementBaseServo() {
   Serial.println("\ncurrent pos: " + String(currentBaseServoPosition));
   // currentBaseServoPosition = (currentBaseServoPosition == baseServoMin) ? baseServoMin : currentBaseServoPosition--;
-  if (currentBaseServoPosition != 0) {
+  if (currentBaseServoPosition != baseServoMin) {
     currentBaseServoPosition--;
   }
   Serial.println("pos after Validation: " + String(currentBaseServoPosition));
@@ -107,6 +186,11 @@ void closeClampServo() {
   currentClampServoPosition = pos;
 }
 
-
+void testClampServo() {
+  openClampServo();
+  delay(300);
+  closeClampServo();
+  delay(300);
+}
 
 #endif
