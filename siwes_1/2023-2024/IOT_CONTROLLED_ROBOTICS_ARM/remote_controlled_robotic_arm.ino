@@ -76,20 +76,56 @@ void setup() {
 
 
 void loop() {
-  // testClampServo();
-  // decrementBaseServo();
-  // incrementBaseServo();
-  // decrementRightServo();
-  // while (currentRightServoPosition ) {
-  // statements
-  // }
-  decrementRightServo();
-  // incrementRightServo();
-
-
-  delay(50);
+  if (btModule.available()) {
+    char receivedSignal = btModule.read();
+    switch (receivedSignal) {  // r, l, e, f, a, b, h, j
+      case 'r':
+        incrementBaseServo();
+        break;
+      case 'l':
+        decrementBaseServo();
+        break;
+      case 'e':
+        openClampServo();
+        break;
+      case 'f':
+        closeClampServo();
+        break;
+      case 'a':
+        incrementRightServo();
+        break;
+      case 'b':
+        decrementRightServo();
+        break;
+      case 'h':
+        incrementLeftServo();
+        break;
+      case 'j':
+        decrementLeftServo();
+        break;
+    }
+  }
 }
 
+
+void decrementLeftServo() {
+  Serial.println("\ncurrent pos: " + String(currentLeftServoPosition));
+  if (currentLeftServoPosition != leftServoMin) {
+    currentLeftServoPosition--;
+  }
+  Serial.println("pos after Validation: " + String(currentLeftServoPosition));
+
+  moveServo(leftServo, currentLeftServoPosition);
+  delay(servoDelay);
+}
+
+void incrementLeftServo() {
+  currentLeftServoPosition++;
+  currentLeftServoPosition = (currentLeftServoPosition >= leftServoMax) ? leftServoMax : currentLeftServoPosition;
+
+  moveServo(leftServo, currentLeftServoPosition);
+  delay(servoDelay);
+}
 
 void decrementRightServo() {
   Serial.println("\ncurrent pos: " + String(currentRightServoPosition));
@@ -110,31 +146,11 @@ void incrementRightServo() {
   delay(servoDelay);
 }
 
-
-/*
-
-base servo:
-   +++ = 'r'
-   --- = 'l'
-
-clamp servo:
-   open = 'e'
-   close = 'f'
-
-right servo:
-   +++ = 'a'
-   --- = 'b'
-
-left servo:
-   +++ = 'h'
-   --- = 'j'
-*/
-
 void moveServo(int whichServo, int servoAngle) {
   int convertedServoAngle = map(servoAngle, 0, 180, 10, 460);
   if (servoAngle == 0) {
     convertedServoAngle = 10;
-  } else if(servoAngle == 180) {
+  } else if (servoAngle == 180) {
     convertedServoAngle = 460;
   }
 

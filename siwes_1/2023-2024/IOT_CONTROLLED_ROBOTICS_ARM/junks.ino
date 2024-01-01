@@ -1,4 +1,24 @@
 
+
+/*
+
+base servo:
+   +++ = 'r'
+   --- = 'l'
+
+clamp servo:
+   open = 'e'
+   close = 'f'
+
+right servo:
+   +++ = 'a'
+   --- = 'b'
+
+left servo:
+   +++ = 'h'
+   --- = 'j'
+*/
+
   /*  if (btModule.available()) {
     char receivedSignal = btModule.read();
     switch (receivedSignal) {  // r, l, e, f, a, b, h, j
