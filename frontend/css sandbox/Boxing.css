@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  background: #f4f4f4;
+  border: 1px solid #777;
+  max-width: 20rem;
+  padding: 1rem;
+  /* padding: 1rem 3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 3rem;
+  padding-right: 4rem; */
+  margin: 1rem;
+  /* margin: 1rem 3rem;
+  margin-left: 3rem;
+  margin-right: 4rem; */
+}
+
+div {
+  text-align: center;
+}
+
+.box1 {
+  float: right;
+}
+
+.box2 {
+  float: left;
+}
+
+.box3 {
+  margin: auto;
+}
+
+.box1:hover {
+  font-size: 10rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 4rem;
+}
+
+a:hover {
+  color: red;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* a:visited {
+  color: yellow;
+} */
+
+button {
+  background: #777;
+  font-size: 1.5rem;
+  color: #f4f4f4;
+}
+
+button:hover {}
+
+8l
