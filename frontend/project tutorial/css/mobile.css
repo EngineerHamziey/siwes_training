@@ -1,0 +1,31 @@
+.items{
+  display: block;
+  padding:1rem;
+}
+.item {
+  display:flex;
+  text-align: left;
+}
+.item i{
+  margin-right: 1rem;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+
+@media(max-width:500px) {
+  #navbar{
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo{
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  #nav ul{
+    padding:0.75rem;
+  }
+  .who-img{
+    display:none;
+  }
+}

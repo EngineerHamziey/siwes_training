@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/flexbox.css">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        flex-direction:row;
+        background-color: cadetblue;
+        width: 900px;
+        height: 600px;
+        flex-wrap: wrap;
+
+        /* flex direction :
+        row
+        column
+        row-reserve
+        colum-reverse
+        */
+
+        /* aligning flex items horizontally*/
+        /* justify-content: center; */
+        /* justify-content:
+        baseline
+        center
+        left
+        right
+        space-between
+        space-around
+        space-evenly
+        */
+
+        /*align flex item vertically*/
+        /* align-items:center ; */
+        /*align-items :
+        center
+        stretch
+        flex-start
+        flex-end
+        left
+        right 
+         and so on .
+         */
+
+        /* gap: 1rem; */
+
+
+    }
+
+    .box1{
+        order: 4;
+    }
+    .box2{
+        order: 2;
+    }
+    .box3{
+        order: 3;
+
+    }
+    .box4{
+        order: 5;
+    }
+    .box5{
+        order: 1;
+    }
+
+    .box{
+        width: 100px;
+        /* height: 100px; */
+        border: 1px solid #000;
+        background-color: rgb(68, 75, 75);
+        color: #ffff;
+        text-align: center;
+        font-size: 2rem;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box1 box"><p>1</p></div>
+        <div class="box2 box"><p>2</p></div>
+        <div class="box3 box"><p>3</p></div>
+        <div class="box4 box"><p>4</p></div>
+        <div class="box5 box"><p>5</p></div>
+</body>
+</html>

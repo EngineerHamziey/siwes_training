@@ -1,0 +1,61 @@
+o<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form & Input</title>
+</head>
+<body>
+  <form action = "process.php">
+    <div>
+      <laber for = "name">Name</laber><br>
+      <input type = "text" id ="name" name ="name">
+    </div>
+    <div>
+      <label for = "email">Email</label><br>
+      <input type="email" id ="email" name ="email" placeholder="Enter your email">
+    </div>
+    <div>
+      <label for = "message">Message</label><br>
+      <textarea name ="message" id = "message" cols = "50" rows ="5"></textarea>
+    </div>
+    <div>
+      <label for ="sex">sex</label>
+      <select name ="sex" id ="sex">
+        <option value ="male">male</option>
+        <option value ="female" selected>female</option>
+        <option value ="other">other</option>
+    </select>
+    </div>
+    <div>
+      <label for ="birthday">Birthday</label>
+      <input type ="date" name ="date" id ="date">
+    </div>
+    <div>
+      <label for ="membership">Membership</label>
+      <input type ="radio" name ="membership" id ="membership" value ="simple">simple
+      <input type ="radio" name ="membership" id ="membership" value ="standard"checked>standard
+      <input type ="radio" name ="membership" id ="membership" value ="super">super
+    </div>
+    <div>
+      <label for ="Age">Age</label>
+      <input type ="number" name ="Age" id ="Age">
+    </div>
+    <div>
+      <label for ="hobby">I like</label>
+      <input type ="checkbox" name ="hobby" id="hobby" value ="football">football
+      <input type ="checkbox" name ="hobby" id="hobby" value ="basketball">basketball
+      <input type ="checkbox" name ="hobby" id="hobby" value ="volleyball">volleyball
+      <input type ="checkbox" name ="hobby" id="hobby" value ="hocketball">hocketball
+    </div>
+    <input type="submit" value ="submit">
+    <button  type="reset" value="reset">reset</button>
+  <form>
+  </body>
+
+</html>
+
+    
+      
+  

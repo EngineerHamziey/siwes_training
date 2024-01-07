@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("/assignment2/beans.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* overflow: hidden; */
+  text-align: center;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+}
+
+img {
+  margin: 1rem auto;
+  display: block;
+}
+
+#menu {
+  width: 30rem;
+  /* max-height: 80vh; */
+  margin: 4rem auto;
+  background-color: #deb887;
+}
+
+/* .menu-content{
+  display:;
+} */
+article p {
+  display: inline-block;
+}
+
+.name {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+section {
+  margin: 1rem;
+}
+
+a {
+  margin: 1rem auto;
+  text-decoration: none;
+}
