@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Sizing</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;/* this arranges the content of the container horizontally*/
+    }
+
+    #content-box, #border-box {
+      background-color: aqua;
+      margin: 2rem;
+      height: 5rem;
+      width: 5rem;
+      padding: 1rem;
+      border: solid 0.5rem black;
+    }
+
+    #content-box {
+      box-sizing: content-box;
+    }
+
+    #border-box {
+      box-sizing: border-box;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="border-box">Border Box</div>
+    <div id="content-box">Content Box</div>
+  </div>
+</body>
+</html>
