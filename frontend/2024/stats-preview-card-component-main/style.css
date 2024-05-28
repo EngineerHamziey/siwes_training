@@ -31,8 +31,7 @@ body {
   font-size: 0.9375rem; /* equivalent of 15px(i.e 15/16 = 0.9375)*/
   line-height: 1.4;
   color: white;
-  /* font-family: "Lexend Deca", sans-serif; */
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   text-align: center;
 }
 

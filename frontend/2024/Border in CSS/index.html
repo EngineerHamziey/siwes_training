@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background-color: rgb(141, 182, 218);
+      color: whitesmoke;
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .item {
+      height: 5rem;
+      width: 7rem;
+      background-color: rgb(39, 11, 11);
+    }
+
+    .item-1 {
+      
+    }
+
+    .item-2 {
+      border-radius: 0.7rem 0 0.7rem 0.7rem;
+      /* border-radius: top-left....then go clockwise; */
+    }
+
+    .item-2, .item-3, .item-4, .item-5, .item-6 {
+      margin: 2rem 0 0 0;
+    }
+
+    .circle {
+      margin-top: 1rem;
+      background-color: rgb(6, 26, 44);
+      height: 7rem;
+      width: 7rem;
+      /* for perfect circle to formed, we must have a square(i.e same height and width) and 50% border-radius */
+      border-radius: 50%;
+    }
+  </style>
+
+  <title>Border in CSS</title>
+</head>
+<body>
+  <div class="page-container">
+    <!-- .item-$*6{Item $} -->
+    <div class="item item-1">Item 1</div>
+    <div class="item item-2">Item 2</div>
+    <div class="item item-3">Item 3</div>
+    <div class="item item-4">Item 4</div>
+    <div class="item item-5">Item 5</div>
+    <div class="item item-6">Item 6</div>
+    <div class="circle">circle</div>
+  </div>
+</body>
+</html>
