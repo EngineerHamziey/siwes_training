@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
 /* css resets */
 /* the * means select all elements */
 * {
@@ -29,7 +31,8 @@ body {
   font-size: 0.9375rem; /* equivalent of 15px(i.e 15/16 = 0.9375)*/
   line-height: 1.4;
   color: white;
-  font-family: sans-serif;
+  /* font-family: "Lexend Deca", sans-serif; */
+  font-family: Inter;
   text-align: center;
 }
 
@@ -60,21 +63,38 @@ h1 {
   padding: 1rem;
 }
 
+.discover-text {
+  color: var(--slightly-transparent-white-main-paragraph);
+}
+
 img {
   width: 100%; /*makes it take 100% the width of the container*/
 }
 
 #ratings {
-  list-style: none;
+  list-style: none;/*to remove the bullet point*/
+  margin: 1rem 0;
 }
 
 .each-rating {
   display: flex;
   flex-direction: column;
+  margin-top: 1.5rem;
 }
 
 .rating-component {
   display: block;
+}
+
+.rating-number {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.rating-text {
+  color: var(--slightly-transparent-white-main-paragraph);
+  text-transform: uppercase;/* to transform text to capital letter*/
 }
 
 .attribution { 
@@ -84,4 +104,5 @@ img {
 
 .attribution a { 
   color: hsl(228, 45%, 44%); 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
