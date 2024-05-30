@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .flex-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .page-container {
+      background-color: #c33434;
+      min-width: 100vw;
+      min-height: 100vh;
+      padding: 0 1rem;
+    }
+
+    .page-heading {
+      margin-top: 5rem;
+    }
+
+    .card{
+      background-color: #020a31;
+      min-width: 50%;
+      min-height: 10rem;
+      flex-direction: row;
+      border-radius: 1rem 0 1rem 0;
+      padding: 1.5rem;
+    }
+
+    .links {
+      padding: 0.75rem 1rem;
+      background-color: #8692d2;
+      text-decoration: none;/*this remove the underline in the link*/
+    }
+
+    .link-2 {
+      margin: 0 1rem;
+    }
+
+    .link-3 {
+      margin-right: 1rem;
+    }
+  </style>
+  <title>Positioning in CSS</title>
+</head>
+<body>
+  <div class="page-container flex-center">
+    <h1 class="page-heading">Links To My Classwork</h1>
+    <div class="card flex-center">
+      <a href="#" class="links link-1">Q 1</a>
+      <a href="#" class="links link-2">Q 2</a>
+      <a href="#" class="links link-3">Q 3</a>
+      <a href="#" class="links link-4">Q 4</a>
+    </div>
+  </div>
+</body>
+</html>
