@@ -24,6 +24,7 @@
   --slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);/* main paragraph */
   
   --slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);/* stat headings */
+  --overlay: rgba(128, 10, 197, 0.5);/* the color of the image overlay*/
 }
 
 body {
@@ -53,9 +54,17 @@ h1 {
 
 .card {
   max-width: 20rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin: 3rem 1rem 2rem 1rem;
   background-color: var(--dark-desaturated-blue);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.team-image {
+  background: linear-gradient(var(--overlay), var(--overlay)), url(images/image-header-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 15rem;
 }
 
 .page-text {
