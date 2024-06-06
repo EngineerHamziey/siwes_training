@@ -46,6 +46,7 @@ h1 {
 }
 
 .card-container {
+  min-height: 100vh;
   display: flex;/* arranges items horizontally*/
   flex-direction: column;/*rearranges it vertically*/
   justify-content: center;/*centers it vertically*/
@@ -76,7 +77,7 @@ h1 {
 }
 
 img {
-  width: 100%; /*makes it take 100% the width of the container*/
+  /* width: 100%; makes it take 100% the width of the container */
 }
 
 #ratings {
@@ -113,4 +114,43 @@ img {
 .attribution a { 
   color: hsl(228, 45%, 44%); 
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* the width here means the minimum width for this styles to take effect is 785px */
+@media (min-width: 785px) {
+  .card-container {
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 2rem;
+    /* to remove the previous value of a property, use unset */
+    max-width: unset;
+  }
+
+  .team-image {
+    /* change the background image to desktop version */
+    background-image: linear-gradient(var(--overlay), var(--overlay)), url(images/image-header-desktop.jpg);
+    /* remove the previously set height */
+    height: unset;
+  }
+
+  .page-text, .team-image {
+    /* this makes flex-container items have same size */
+    flex: 1;
+  }
+
+  .page-text {
+    padding: 3rem;
+  }
+
+  #ratings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+  }
+
+
 }
