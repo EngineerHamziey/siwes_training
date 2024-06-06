@@ -46,7 +46,6 @@ h1 {
 }
 
 .card-container {
-  min-height: 100vh;
   display: flex;/* arranges items horizontally*/
   flex-direction: column;/*rearranges it vertically*/
   justify-content: center;/*centers it vertically*/
@@ -119,6 +118,7 @@ img {
 /* the width here means the minimum width for this styles to take effect is 785px */
 @media (min-width: 785px) {
   .card-container {
+    min-height: 100vh;
   }
 
   .card {
@@ -151,6 +151,5 @@ img {
     align-items: center;
     margin: 1rem;
   }
-
 
 }
