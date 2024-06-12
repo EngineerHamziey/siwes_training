@@ -1,0 +1,70 @@
+
+/* css reset */
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+body {
+}
+
+/* common classes */
+.flex-vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .background-red {
+  background-color: red;
+  color: aliceblue;
+  font-style: italic;
+} */
+
+.page-wrapper {
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+}
+
+.cards-wrapper {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.each-card {
+  max-width: 20rem;
+  padding: 2rem;
+}
+
+.card-suv {
+  background-color: rgb(156, 118, 118);
+}
+
+.card-sedan {
+  background-color: rgb(123, 123, 199);
+}
+
+.card-luxury {
+  background-color: pink;
+}
+
+.card-heading {
+  margin: 0 0 1rem 0;
+}
+
+.card-description {
+  margin: 0 0 1rem 0;
+}
+
+
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+}
