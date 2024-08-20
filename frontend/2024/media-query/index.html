@@ -10,9 +10,12 @@
       box-sizing: border-box;
     }
     
+    body {
+      text-align: center;
+    }
+
     h1 {
       margin: 1rem;
-      text-align: center;
     }
 
     .page-container {
@@ -33,6 +36,24 @@
       margin: 1rem;
       padding: 1rem;
       border-radius: .5rem;
+    }
+
+    @media (min-width: 500px) {
+      body {
+        /* unset, makes the value of a property to return to default */
+        text-align: unset;
+      }
+
+      .cards-wrap {
+        display: flex;
+      }
+    }
+
+    @media (min-width: 960px) {
+      .card-group-1,
+      .card-group-2 {
+        display: flex;
+      }
     }
 
   </style>

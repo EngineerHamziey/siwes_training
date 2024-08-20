@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+.lexend-deca {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.big-shoulders-display {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 /* css reset */
 * {
@@ -7,6 +24,8 @@
 }
 
 body {
+  font-size: 0.9375rem; /*15px */
+  line-height: 1.4;
 }
 
 /* common classes */
@@ -17,11 +36,6 @@ body {
   align-items: center;
 }
 
-/* .background-red {
-  background-color: red;
-  color: aliceblue;
-  font-style: italic;
-} */
 
 .page-wrapper {
   min-height: 100vh;
@@ -31,6 +45,7 @@ body {
 .cards-wrapper {
   list-style: none;
   margin-bottom: 1rem;
+  color: hsla(0, 0%, 100%, 0.75);
 }
 
 .each-card {
@@ -38,19 +53,23 @@ body {
   padding: 2rem;
 }
 
-.card-suv {
-  background-color: rgb(156, 118, 118);
+.card-sedan {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 0.3rem 0.3rem 0 0;
 }
 
-.card-sedan {
-  background-color: rgb(123, 123, 199);
+.card-suv {
+  background-color: hsl(184, 100%, 22%);
 }
 
 .card-luxury {
-  background-color: pink;
+  background-color: hsl(179, 100%, 13%);
+  border-radius:  0 0 0.3rem 0.3rem;
 }
 
 .card-heading {
+  color: hsl(0, 0%, 95%);
+  font-size: 2.5rem;
   margin: 0 0 1rem 0;
 }
 
@@ -58,7 +77,35 @@ body {
   margin: 0 0 1rem 0;
 }
 
+.btn {
+  text-decoration: none;
+  background-color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 1rem;
+}
 
+
+/* if the link is currently clicked */
+/* .btn:active {
+  color: aliceblue;
+} */
+
+.btn-sedan{
+  color: hsl(31, 77%, 52%);
+}
+
+.btn-suv{
+  color: hsl(184, 100%, 22%);
+}
+
+.btn-luxury{
+  color: hsl(179, 100%, 13%);
+}
+
+/* if the link has been visited */
+/* .btn:visited {
+  color: red;
+} */
 
 .attribution { 
   font-size: 11px; 
