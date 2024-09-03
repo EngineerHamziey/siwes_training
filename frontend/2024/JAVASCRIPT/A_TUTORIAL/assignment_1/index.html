@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Assignment</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-size: 0.9375rem;
+      text-align: center;
+    }
+
+    .page-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin: 1rem;
+    }
+
+    button {
+      margin: 1rem 0 2rem 0;
+      border: none;
+      background-color: rgb(186, 150, 103);
+      padding: 0.5rem 0.8rem;
+      font-weight: 700;
+      border-radius: 0.3rem;
+    }
+
+    .shoe-container {
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    img {
+      width: 30rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="page-container" class="page-container">
+    <h1>Our Available Shoes</h1>
+  </div>
+
+  <script>
+    // .innerHTML
+    // .innerText
+    // 
+    // query selector is general for tag name, class name, id name.
+    // .querySelector
+    // .querySelectorAll
+    const pageContainer = document.getElementById("page-container");
+
+    const imageLinks = ["https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&w=600", "https://media.istockphoto.com/id/171224469/photo/canvas-shoes.jpg?b=1&s=612x612&w=0&k=20&c=U9NLTutbuQ_L3HABoaa9Bsb_U3iJYw1QmKCBe0H3KWM=", "https://images.pexels.com/photos/609771/pexels-photo-609771.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/267202/pexels-photo-267202.jpeg?auto=compress&cs=tinysrgb&w=600"];
+
+    for(let count = 0; count < imageLinks.length; count++) {
+      console.log(count);
+      pageContainer.innerHTML += `
+      <div class="shoe-container">
+      <img src="${imageLinks[count]}" alt="Fine shoe">
+      </div>
+      <button>BUY ME</button>`;
+    }
+  </script>
+</body>
+</html>

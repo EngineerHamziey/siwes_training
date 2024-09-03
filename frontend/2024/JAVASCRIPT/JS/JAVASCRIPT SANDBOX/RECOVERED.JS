@@ -54,7 +54,7 @@
 // // for multiword variable names
 // var firstName = 'joe'; //camel case
 // var first_name = 'Sara';// underscore
-// var FirstName = "Tom"; //Pascal cade, recommended when we get to object oriented programming...creating objects
+// var FirstName = "Tom"; //Pascal case, recommended when we get to object oriented programming...creating objects
 // var firstname = "Shaun"; // not really recommended
 
 // // let and var
@@ -109,7 +109,7 @@ console.log(typeof hasKids);
 const car = null;
 console.log(typeof car);//the object returned here is a bogus (fron the word bug) its bug
 
-// undefuned type
+// undefined type
 let test;//this is undefined since it ain't given a value, const must bee given value immediately
 console.log(typeof test);
 
