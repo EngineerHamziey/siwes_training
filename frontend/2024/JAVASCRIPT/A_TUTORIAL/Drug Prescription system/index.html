@@ -12,14 +12,18 @@
     <h1 class="page-head green-text flex-center-column">Smart Drug Prescription System</h1>
     <div class="form-container">
       <form id="health-form">
-        <div class="each-form-field">
-          <label for="age">What is your age?</label>
-          <input type="number" id="age" name="age" required>
+        <div class="each-form-field text-input">
+          <p class="question-label">What is your age?</p>
+          <div class="text-input-wrap">
+            <input type="number" id="age" name="age" required>
+          </div>
         </div>
         <!-- Other questions will be added dynamically here -->
       </form>
-      <div id="prescriptionResult"></div>
-      <button class="submit-btn" onclick="submitForm()">Get Prescription</button>
+      <div id="prescriptionResult">
+        <!-- javascript will add the result here dynamically -->
+      </div>
+      <button class="submit-btn green-btn" onclick="submitForm()">Get Prescription</button>
     </div>
   </div>
 </body>

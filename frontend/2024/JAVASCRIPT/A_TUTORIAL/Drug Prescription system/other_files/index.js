@@ -24,18 +24,21 @@ function loadQuestions() {
     let newFormField = document.createElement('div');
     newFormField.className = "each-form-field";
     if(currentQuestion >= 11) {
+      newFormField.className += " text-input";
       // display input type number
       newFormField.innerHTML = `
-        <p>${questions[currentQuestion]}</p>
-        <input type="number" id="q-y-${currentQuestion}" name="q${currentQuestion}" required>
+        <p class="question-label">${questions[currentQuestion]}</p>
+        <div class="text-input-wrap">
+        <input type="number" id="q${currentQuestion}" name="q${currentQuestion}" required>
+        </div>
         `;
     }else {
       newFormField.innerHTML = `
-        <p>${questions[currentQuestion]}</p>
+        <p class="question-label">${questions[currentQuestion]}</p>
         <input type="radio" id="q-y-${currentQuestion}" name="q${currentQuestion}" required>
-        <label for="q-y-${currentQuestion}">Yes</label>
+        <label class="green-btn" for="q-y-${currentQuestion}">Yes</label>
         <input type="radio" id="q-n-${currentQuestion}" name="q${currentQuestion}" required>
-        <label for="q-n-${currentQuestion}">No</label>
+        <label class="red-btn" for="q-n-${currentQuestion}">No</label>
         `;
     }
     

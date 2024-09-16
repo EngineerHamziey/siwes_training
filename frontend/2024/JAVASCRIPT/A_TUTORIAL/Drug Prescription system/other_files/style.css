@@ -1,7 +1,9 @@
 :root {
   --body-bg: #f0f4f8;
+  --container-bg: #fff;
   --our-green: #004d40;
   --our-light-green: #00796b;
+  --our-red-btn: #d32f2f;
 }
 
 * {
@@ -15,7 +17,7 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   font-size: 0.9375rem;
-  color: black;
+  color: #555;
 }
 
 .flex-center-column {
@@ -26,8 +28,18 @@ body {
 }
 
 .page-container {
-  background-color: rgb(182, 176, 176);
-  margin: 1rem;
+  background-color: var(--container-bg);
+  border-radius: 0.5rem;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.each-form-field {
+  padding: 1rem 0;
+}
+
+.question-label {
+  padding: 0 0 0.6rem 0;
 }
 
 .green-btn {
@@ -35,7 +47,7 @@ body {
 }
 
 .red-btn {
-  background-color: red;
+  background-color: var(--our-red-btn);
 }
 
 .red-btn, .green-btn {
@@ -48,4 +60,21 @@ body {
 
 .btn {
   padding: 0.3rem 0.8rem;
+}
+
+.submit-btn {
+  margin-top: 2rem;
+}
+
+input[type=number] {
+  width: 80%;
+  height: 1.2rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: solid 2px #ccc;
+  padding: 1rem 0.5rem;
+}
+
+input[type=number]:focus-visible {
+  outline: solid 1px #00796b;
 }
